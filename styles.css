@@ -1,0 +1,244 @@
+html {
+    scroll-behavior: smooth;
+}
+/* body styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; 
+    box-sizing: border-box;
+    background-color: #f0f0f0; 
+    color: #333; 
+    overflow-x: hidden;
+}
+
+/* header section */
+.head {
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: transparent; 
+    color: #ffffff; 
+}
+
+.head::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/IMG2.webp");
+    background-size: cover;
+    filter: grayscale(100%) blur(4px); 
+    z-index: -1; 
+}
+
+.head__overlay {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.head__item-content {
+    z-index: 10;
+    max-width: 850px;
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.link-content a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #bdbdbd;
+    border: 1px solid #bdbdbd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 1em;
+
+}
+
+.link-content a:hover {
+    transform: scale(1.1);
+    color: #fff;
+    background-color: rgb(25, 67, 253);
+    border-color: rgb(25, 67, 253);
+}
+
+.head__item-content p {
+    font-size: 1.1rem; 
+    line-height: 1.5; 
+    letter-spacing: 2px;
+}
+
+.head__img {
+    width: 200px; 
+    border-radius: 50%;
+    border: 3px solid #96a3a8;
+    margin-bottom: 2rem; 
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+    animation: zoomRotateFade 1s ease-out forwards;
+}
+
+@keyframes zoomRotateFade {
+    0% {
+        transform: scale(0.2) rotate(-45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.8) rotate(-10deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+/* nav section */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px; 
+}
+
+.nav__ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+
+@keyframes logoMovement {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nav__logo {
+    margin-right: 25px;
+    width: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: logoMovement 30s linear infinite;
+}
+
+.nav__logo:hover {
+    transform: scale(1.2); 
+    opacity: 0.8; 
+}
+
+/* Footer styles */
+.footer {
+    background: linear-gradient(to right, rgb(39, 97, 173), rgb(53, 59, 80)); 
+    color: #fff; 
+    height: auto;
+    max-width: 1200px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 20px 0px;
+    align-items: center;
+}
+
+.footer__links a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.footer__contact h3 {
+    margin: 20px;
+}
+
+.head-icons {
+    background-color: beige;
+    border-radius: 0.45em;
+    width: 9em;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.footer__social-icons img {
+    width: 30px;
+    margin: 0.6em;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.footer__social-icons img:hover {
+    transform: scale(1.2); 
+    background-color: #87b5fa;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .head__img {
+        margin-top: 8em;
+    }
+    /* Footer styles */
+    .footer {
+        background-color: linear-gradient(90deg, rgb(39, 173, 84), rgb(48, 54, 73)); 
+        color: #fff; 
+        height: auto;
+    }
+
+    .footer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__links {
+        margin-bottom: 0.5em; 
+    }
+
+    .footer__links a {
+        display: block; 
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px; 
+    }
+
+    .footer__contact p {
+        margin: 0;
+    }
+
+    .footer__social-icons img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .footer__social-icons {
+        margin-top: 20px; 
+    }
+
+ }
+    
+
+
+
